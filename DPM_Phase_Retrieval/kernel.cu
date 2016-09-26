@@ -965,7 +965,7 @@ int main()
 	}
 	std::cout << "Cycle Time: " << (timestamp() - start) / static_cast<float> (runs - 1) << "ms" << std::endl;
 	auto output_size = dpm_compute.getDPM_BG(image).dpm_width;
-	WriteDebugCuda(thrust::raw_pointer_cast(phase_image_d.data()), output_size, output_size, "dpm_1_result.tif");
+	WriteDebugCuda(thrust::raw_pointer_cast(phase_image_d.data()), output_size, output_size, "dpm_1_result.tif",true);
 	//
 	return 0;
 }
